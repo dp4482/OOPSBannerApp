@@ -1,51 +1,31 @@
 /**
- * OOPSBannerApp UC3 – Banner using String.join()
+ * OOPSBannerApp UC4 – Render OOPS as Banner using String Array and Loop
  *
- * This version refactors UC2 by using String.join()
- * instead of string concatenation.
+ * This use case improves upon UC3 by storing banner lines
+ * in a String array and printing them using a loop.
  *
  * @author Dinesh Panda
- * @version 3.0
+ * @version 4.0
  */
 
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        System.out.println(String.join(" ",
-                " ***** ",
-                "*     *",
-                "*     *",
-                "*     *",
-                "*     *",
-                "*     *",
-                " ***** "));
+        String[] lines = {
 
-        System.out.println(String.join(" ",
-                " ***** ",
-                "*     *",
-                "*     *",
-                "*     *",
-                "*     *",
-                "*     *",
-                " ***** "));
+            String.join("   ", " ***** ", " ***** ", "****** ", " ***** "),
+            String.join("   ", "*     *", "*     *", "*     *", "*      "),
+            String.join("   ", "*     *", "*     *", "*     *", "*      "),
+            String.join("   ", "*     *", "*     *", "****** ", " ***** "),
+            String.join("   ", "*     *", "*     *", "*      ", "      *"),
+            String.join("   ", "*     *", "*     *", "*      ", "      *"),
+            String.join("   ", " ***** ", " ***** ", "*      ", " ***** ")
 
-        System.out.println(String.join(" ",
-                "****** ",
-                "*     *",
-                "*     *",
-                "****** ",
-                "*      ",
-                "*      ",
-                "*      "));
+        };
 
-        System.out.println(String.join(" ",
-                " ***** ",
-                "*      ",
-                "*      ",
-                " ***** ",
-                "      *",
-                "      *",
-                " ***** "));
+        for (String line : lines) {
+            System.out.println(line);
+        }
     }
 }
