@@ -1,23 +1,51 @@
 /**
- * OOPSBannerApp UC2 – Banner Display Application
+ * OOPSBannerApp UC3 – Banner using String.join()
  *
- * This class displays the word "OOPS" in a large ASCII banner
- * format using asterisks (*) and spaces.
+ * This version refactors UC2 by using String.join()
+ * instead of string concatenation.
  *
  * @author Dinesh Panda
- * @version 2.0
+ * @version 3.0
  */
 
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        System.out.println("  *****   " + "  *****   " + " ******** " + " ******* ");
-        System.out.println(" *     *  " + " *     *  " + " *      * " + " *      ");
-        System.out.println(" *     *  " + " *     *  " + " *      * " + " *      ");
-        System.out.println(" *     *  " + " *     *  " + " ******** " + " ******* ");
-        System.out.println(" *     *  " + " *     *  " + " *        " + "       * ");
-        System.out.println(" *     *  " + " *     *  " + " *        " + "       * ");
-        System.out.println("  *****   " + "  *****   " + " *        " + " ******* ");
+        System.out.println(String.join(" ",
+                " ***** ",
+                "*     *",
+                "*     *",
+                "*     *",
+                "*     *",
+                "*     *",
+                " ***** "));
+
+        System.out.println(String.join(" ",
+                " ***** ",
+                "*     *",
+                "*     *",
+                "*     *",
+                "*     *",
+                "*     *",
+                " ***** "));
+
+        System.out.println(String.join(" ",
+                "****** ",
+                "*     *",
+                "*     *",
+                "****** ",
+                "*      ",
+                "*      ",
+                "*      "));
+
+        System.out.println(String.join(" ",
+                " ***** ",
+                "*      ",
+                "*      ",
+                " ***** ",
+                "      *",
+                "      *",
+                " ***** "));
     }
 }
